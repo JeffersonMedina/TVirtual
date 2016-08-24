@@ -16,24 +16,20 @@
 
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<!--<ul class="nav navbar-nav">
-					<li>
-						<a href="">Categorias <span class="sr-only"></span></a>
-					</li>
-				</ul>-->
+				
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown">
 						{% if user.is_staff %}
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Action <span class="caret"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							
+
 							<li>
 								<a href="{% url 'Crear' %}">Nuevo Producto</a>
 							</li>
 							<li class="divider"></li>
 							<li>
 								<a href="{% url 'RegEmpleado' %}">Registrar Empleado</a>
-							</li>							
+							</li>
 						</ul>
 						{% endif %}
 						{% if user.is_authenticated %}
@@ -45,17 +41,17 @@
 								<a href="{% url 'Registrar' %}"><span class="glyphicon glyphicon-user"></span>Registrar</a>
 							</li>
 							<li>
-								<a href="{% url 'Login' %}"><span class="glyphicon glyphicon-log-in"></span>LogIn</a>				
+								<a href="{% url 'Login' %}"><span class="glyphicon glyphicon-log-in"></span>LogIn</a>
 							</li>
 							{% endif %}
 
 							{% if user.is_authenticated %}
 							<li>
-								<a href="{% url 'ListComprar' %}"><span class="glyphicon glyphicon-shopping-cart"></span>
+								<a href="{% url 'ListComprar' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>
 							</li>
 							{% else %}
 							<li>
-								<a href="{% url 'Login' %}"><span class="glyphicon glyphicon-shopping-cart"></span>
+								<a href="{% url 'Login' %}"><span class="glyphicon glyphicon-shopping-cart"></span></a>
 							</li>
 							{% endif %}
 					</li>

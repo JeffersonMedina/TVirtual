@@ -180,7 +180,8 @@ def Comprar(request, pk):
         d.cliente = cli
         d.articulo = p.nombre
         d.cantidad = p.cantidad
-        d.total = p.precio * p.cantidad
+        d.precio = p.precio
+        d.total = d.precio * p.cantidad
         d.save()
         return redirect('Inicio')
     else:

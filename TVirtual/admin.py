@@ -25,8 +25,8 @@ class AdminStock(admin.ModelAdmin):
 admin.site.register(Stock,AdminStock)
 
 class AdminDetallePedido(admin.ModelAdmin):
-	list_display = ["__str__","pedidos", "articulo", "cantidad", "total"]
-	list_filter = ["pedidos", "articulo", "cantidad", "total"]
+	list_display = ["__str__","pedidos", "articulo", "cantidad", "precio", "total"]
+	list_filter = ["pedidos", "articulo", "cantidad","precio", "total"]
 	search_fields = ["pedidos"]
 
 	class Meta:

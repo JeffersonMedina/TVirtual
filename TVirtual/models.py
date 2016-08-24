@@ -44,6 +44,7 @@ class DetallePedido(models.Model):
 	pedidos = models.AutoField(primary_key=True, editable=False)
 	cliente = models.CharField(max_length=100)
 	articulo = models.CharField(max_length=100)
+	precio = models.DecimalField(max_digits=6, decimal_places=2)
 	cantidad = models.IntegerField()
 	total = models.DecimalField(max_digits=6, decimal_places=2)
 
